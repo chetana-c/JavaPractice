@@ -10,9 +10,15 @@ public class FindOccurences {
         FindOccurences fo = new FindOccurences();
         // int[] list = fo.solve(A);
         // int[] list2 = fo.findOccurences(A);
-        int[] list2 = fo.findOccurences(A2);
+/*        int[] list2 = fo.findOccurences(A2);
         for(int i=0;i<list2.length;i++){
             System.out.print(list2[i] + ",");
+        }*/
+
+        List<Integer> result = new ArrayList<>();
+        result = fo.occurence(A);
+        for(int i=0; i<result.size(); i++){
+            System.out.print(result.get(i));
         }
     }
 
@@ -59,6 +65,19 @@ public class FindOccurences {
             ans[i] = list.get(i);
         }
         return ans;
+    }
+
+    public List<Integer> occurence(int[] A){
+        Arrays.sort(A);
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for(int i=0; i<A.length; i++){
+            if(map.containsKey(A[i]))
+                map.put(A[i],map.get(A[i])+1);
+            else
+                map.put(A[i],1);
+        }
+        List<Integer> targetList = new ArrayList<>(map.values());
+        return targetList;
     }
 
 }
