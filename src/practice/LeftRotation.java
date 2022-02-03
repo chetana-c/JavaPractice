@@ -18,7 +18,6 @@ public class LeftRotation {
         for(int i=0; i<n; i++){
             new_arr[i] = arr[(i+mod)%n];
         }
-
         return new_arr;
     }
 }
