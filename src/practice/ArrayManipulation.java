@@ -24,6 +24,7 @@ public class ArrayManipulation {
         System.out.println("Result = "+result_list);
 
     }
+
     public long stringManipulate(int n, int[][] arr){
         int len = arr.length;
         int[] new_arr = new int[n+1]; // values should start from index 1
@@ -36,6 +37,7 @@ public class ArrayManipulation {
         long res = new_arr[n];
         return res;
     }
+
     public long stringManipulateList(int n, List<List<Integer>> queries){
         int len = queries.size();
         long[] new_arr = new long[n+1]; // values should start from index 1
