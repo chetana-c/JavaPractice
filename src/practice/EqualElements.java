@@ -7,8 +7,9 @@ public class EqualElements {
         int[] A = {3, 2, 3, 3, 1, 2, 3, 2, 2, 1, 2, 2, 1, 3, 2, 3, 2, 2, 1, 2, 1, 1, 1, 1, 1, 3, 3, 1, 1, 3, 3, 3, 2, 3, 2};
         int[] A1 = {1, 2, 3};
         int B = 2;
+        int B1 = 1;
         EqualElements ee = new EqualElements();
-         int result = ee.solution(A, B);
+         int result = ee.solution(A1, B1);
         System.out.println("Result = " + result);
 
 
