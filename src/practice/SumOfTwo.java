@@ -7,8 +7,8 @@ public class SumOfTwo {
         int k = 11;
 
         SumOfTwo st = new SumOfTwo();
-        boolean result = st.solve(input, k);
-        boolean result2 = st.solve2(input, k);
+        //boolean result = st.solve(input, k);
+        int[] result2 = st.twoSum(input, k);
         System.out.println("Result = "+ result2);
     }
 
@@ -38,5 +38,30 @@ public class SumOfTwo {
             }
         }
         return false;
+    }
+
+    public int[] twoSum(int[] nums, int target) {
+        int len = nums.length;
+        int[] arr = new int[2];
+        // for(int i=0; i<len; i++){
+        //     for(int j=i+1; j<=len-1; j++){
+        //         if(nums[i] + nums[j] == target){
+        //             arr[0] = i;
+        //             arr[1] = j;
+        //         }
+        //     }
+        // }
+        // return arr;
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for(int i=0; i<len; i++){
+            if(map.containsKey(target - nums[i])){
+                arr[0] = i;
+                arr[1] = map.get(target - nums[i]);
+            }
+            else{
+                map.put(nums[i],i);
+            }
+        }
+        return arr;
     }
 }

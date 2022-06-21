@@ -16,7 +16,7 @@ public class CityBlocks {
     public int solve (String[][] matrix, String[] blocks){
         HashMap<String, int[]> block = new HashMap<>();
         int[] cur = {0,0};
-        int len = 0 ;
+        int len = 0;
         for( int i =0 ;i< matrix.length;i++){
             for (int j =0 ;j< matrix[i].length; j++){
                 // System.out.println(matrix[i][j]);
@@ -33,5 +33,3 @@ public class CityBlocks {
         return len;
     }
 }
-
-

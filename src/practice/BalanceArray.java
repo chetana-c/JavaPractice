@@ -6,11 +6,11 @@ public class BalanceArray {
 
     public static void main(String[] args) {
 
-        int[] a = {5, 5, 2, 5, 8};
+        int[] a2 = {5, 5, 2, 5, 8};
         // select the special elements which after removal , the sum of
         // the odd index elements = the sum of even index elements
         // 5+2+8 = 5+5
-        int[] a2 = {2, 8, 2, 2, 6, 3};
+        int[] a = {2, 8, 2, 2, 6, 3};
         int[] a3 = {2, 1, 6, 4};
         // 2+5+4 = 1+7+3+6 => 11 = 17 (-6)
         BalanceArray ba = new BalanceArray();
