@@ -10,6 +10,7 @@ public class SubarrayWithSum {
         ArrayList<Integer> res = ss.subarraySum(arr, sum);
         System.out.println(res.get(0)+","+ res.get(1));
     }
+
     public ArrayList<Integer> subarraySum(int[] arr, int sum){
         int start = 0;
         int end = 0;
@@ -38,7 +39,4 @@ public class SubarrayWithSum {
 
         return list;
     }
-
-
-
 }
